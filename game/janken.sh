@@ -19,9 +19,9 @@ do
   com_hand_dec="チョキ"
  elif [ $janken = 2 ]; then
   com_hand_dec="パー"
- #else
-  #echo "コンピュータの手が正しく処理されませんでした、ゲームを終了します"
-  #exit 1;
+ else
+  echo "コンピュータの手が正しく処理されませんでした、ゲームを終了します"
+  exit 1;
  fi
 
  #ゲーム開始
