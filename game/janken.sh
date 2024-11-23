@@ -9,7 +9,7 @@
 ########################################
 
 #相手の手
-echo $(($RANDOM % 3)) > janken
+janken=$(($RANDOM % 3)) 
 
 if [ $janken = 0 ]; then
  com_hand_dec="グー"
@@ -26,7 +26,8 @@ fi
 echo "グー・チョキ・パーのどれかを入力してください"
 
 #私の手
-read "最初はグー！じゃんけん:" yourhand
+echo "最初はグー！じゃんけん:"
+read yourhand 
 echo $yourhand
 
 #相手の手出力
