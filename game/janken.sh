@@ -26,8 +26,7 @@ fi
 echo "グー・チョキ・パーのどれかを入力してください"
 
 #私の手
-echo "最初はグー！じゃんけん:"
-read yourhand 
+read -p "最初はグー！じゃんけん:" yourhand
 echo $yourhand
 
 #相手の手出力
