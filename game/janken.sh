@@ -9,6 +9,8 @@
 ########################################
 
 #相手の手
+while true
+do
 janken=$(($RANDOM % 3)) 
 
 if [ $janken = 0 ]; then
@@ -41,34 +43,33 @@ fi
 if [ $com_hand_dec = "グー" ]; then
  if [ $yourhand = "パー" ]; then
   echo "おめでとうございます！あなたの勝ちです！"
-  exit 0;
+  break;
  else
   echo "残念、あなたの負けです。外出は控えましょう。"
-  exit 0;
+  break;
  fi
 fi
 
 if [ $com_hand_dec = "チョキ" ]; then
  if [ $yourhand = "グー" ]; then
   echo "おめでとうございます！あなたの勝ちです！"
-  exit 0;
+  break;
  else
   echo "残念、あなたの負けです。壺を買ったりしないようにしましょう。"
-  exit 0;
+  break;
  fi
 fi
 
 if [ $com_hand_dec = "パー" ]; then
  if [ $yourhand = "チョキ" ]; then
   echo "おめでとうございます！あなたの勝ちです！"
-  exit 0;
+  break;
  else
   echo "残念、あなたの負けです。転ばないように注意しましょう。"
-  exit 0;
+  break;
  fi
 fi
-
-exit 0;
+done
 
 
 
