@@ -37,7 +37,6 @@ echo "コンピュータの手 : "$com_hand_dec
 #勝敗コメント
 if [ $com_hand_dec = $yourhand ]; then
  echo "あいこです、もう一度遊びましょう"
- exit 0;
 fi
 
 if [ $com_hand_dec = "グー" ]; then
