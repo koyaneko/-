@@ -29,7 +29,7 @@ echo "グー・チョキ・パーのどれかを入力してください"
 
 #私の手
 read -p "最初はグー！じゃんけん:" yourhand
-echo $yourhand
+echo "あなたの手:"$yourhand
 
 #相手の手出力
 echo "コンピュータの手 : "$com_hand_dec
