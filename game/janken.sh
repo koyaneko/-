@@ -37,38 +37,41 @@ do
  #勝敗コメント
  if [ $com_hand_dec = $yourhand ]; then
   echo "あいこです、もう一度遊びましょう"
+ else
+  break;
  fi
+done
 
  if [ $com_hand_dec = "グー" ]; then
   if [ $yourhand = "パー" ]; then
    echo "おめでとうございます！あなたの勝ちです！"
-   break;
+   exit 0;
   else
   echo "残念、あなたの負けです。外出は控えましょう。"
-  break;
+  exit 0;
   fi
  fi
 
  if [ $com_hand_dec = "チョキ" ]; then
   if [ $yourhand = "グー" ]; then
    echo "おめでとうございます！あなたの勝ちです！"
-   break;
+   exit 0;
   else
    echo "残念、あなたの負けです。壺を買ったりしないようにしましょう。"
-   break;
+   exit 0;
   fi
  fi
 
  if [ $com_hand_dec = "パー" ]; then
   if [ $yourhand = "チョキ" ]; then
    echo "おめでとうございます！あなたの勝ちです！"
-   break;
+   exit 0;
   else
    echo "残念、あなたの負けです。転ばないように注意しましょう。"
-   break;
+   exit 0;
   fi
  fi
-done
+
 
 
 
