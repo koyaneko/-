@@ -69,7 +69,7 @@ while true; do
     if [ $com_hand_dec = "グー" ]; then
         if [ $yourhand = "パー" ]; then
             # 勝ちの場合
-            echo "おめでとうございます！あなたの勝ちです！"
+            echo "あなたの勝ちです！"
             player_win_cnt=$((${player_win_cnt} + 1))
         else
             # 負けの場合
@@ -83,7 +83,7 @@ while true; do
     if [ $com_hand_dec = "チョキ" ]; then
         if [ $yourhand = "グー" ]; then
             # 勝ちの場合
-            echo "おめでとうございます！あなたの勝ちです！"
+            echo "あなたの勝ちです！"
             player_win_cnt=$((${player_win_cnt} + 1))
         else
             # 負けの場合
@@ -97,7 +97,7 @@ while true; do
     if [ $com_hand_dec = "パー" ]; then
         if [ $yourhand = "チョキ" ]; then
             # 勝ちの場合
-            echo "おめでとうございます！あなたの勝ちです！"
+            echo "あなたの勝ちです！"
             player_win_cnt=$((${player_win_cnt} + 1))
         else
             # 負けの場合
