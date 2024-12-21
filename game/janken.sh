@@ -49,7 +49,7 @@ while true; do
 
     # ゲーム開始
     echo "${game_count}回戦目です"
-    sleep 2
+    sleep 1
     echo "グー・チョキ・パーのどれかを入力してください"
 
     #私の手
@@ -112,7 +112,33 @@ done
 # 最終判定
 if [ ${player_win_cnt} -gt ${cpu_win_cnt} ]; then
     # 勝ちの場合
-    echo "最終結果：おめでとうございます！あなたの勝ちです！"
+        # 敗北時コメントをランダムに設定する
+    SHOURI=$(($RANDOM % 10)) 
+    if [ $SHOURI = 0 ]; then
+        you_win_dec="おめでとうございます！あなたの勝ちです！"
+    elif [ $SHOURI = 1 ]; then
+        you_win_dec="あなたの勝ちです！遊びに行きましょう！"
+    elif [ $SHOURI = 2 ]; then
+        you_win_dec="あなたの勝ちです…。もう一回！もう一回やりましょう！"
+    elif [ $SHOURI = 3 ]; then
+        you_win_dec="やりますね…。次は負けませんよ？"
+    elif [ $SHOURI = 4 ]; then
+        you_win_dec="おめでとうございます。あなたの勝利です！今日はお菓子パーティーをしましょう！"
+    elif [ $SHOURI = 5 ]; then
+        you_win_dec="おめでとうございます！今日はきっと良いことがありますよ！"
+    elif [ $SHOURI = 6 ]; then
+        you_win_dec="残念、私の負けです。ゲーム周回を許可します。"
+    elif [ $SHOURI = 7 ]; then
+        you_win_dec="You Win! congratulation!!"
+    elif [ $SHOURI = 8 ]; then
+        you_win_dec="私が負けるなんて！そ、その力はまさか…！！"
+    elif [ $SHOURI = 9 ]; then
+        you_win_dec="おめでとうございます！あなたの勝ちです！…もう一度やりませんか？"
+    else
+        echo "勝利時のコメントが正しく処理されませんでした、ゲームを終了します"
+        exit 1
+    fi
+    echo $you_win_dec
 else
     # 負けの場合
     # 敗北時コメントをランダムに設定する
@@ -126,7 +152,7 @@ else
     elif [ $HAIBOKU = 3 ]; then
         you_loose_dec="残念、あなたの負けです。今日は甘いものは控えましょう。"
     elif [ $HAIBOKU = 4 ]; then
-        you_loose_dec="残念だったな。怖いか？この力が・・・。"
+        you_loose_dec="残念。あなたの負けです。飲み会もほどほどに。"
     elif [ $HAIBOKU = 5 ]; then
         you_loose_dec="残念、あなたの負けです。今日の夕飯は白米禁止です。"
     elif [ $HAIBOKU = 6 ]; then
@@ -134,7 +160,7 @@ else
     elif [ $HAIBOKU = 7 ]; then
         you_loose_dec="残念、あなたの負けです。今日は動画鑑賞禁止です。"
     elif [ $HAIBOKU = 8 ]; then
-        you_loose_dec="残念。あなたの負けです。飲み会もほどほどに。"
+        you_loose_dec="残念だったな。怖いか？この力が・・・。"
     elif [ $HAIBOKU = 9 ]; then
         you_loose_dec="残念、私の勝ちです。またの挑戦をお待ちしております。"
     else
