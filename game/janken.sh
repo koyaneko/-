@@ -8,16 +8,13 @@
 #
 ########################################
 
-# 何本勝負か
-# readonly GAME_TIMES=5
+
 # 先取数
-# readonly FIRST_TO_GET_CNT=$((${GAME_TIMES} / 2 + 1)) 
 readonly FIRST_TO_GET_CNT=3
 
 game_count=1                #現在何番戦か
 player_win_cnt=0            #プレイヤー勝利数
 cpu_win_cnt=0               #CPU勝利数
-# aiko_flg=false              #あいこかどうかのフラグ
 
 
 #繰り返し
